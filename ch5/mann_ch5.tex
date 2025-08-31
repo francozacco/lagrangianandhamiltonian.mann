@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{adjustbox}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage[mathscr]{euscript}
+
+\title{\textbf{Solved selected problems of Lagrangian and Hamiltonian by Mann}}
+\author{Franco Zacco}
+\date{}
+
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{3cm}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\hatr}{\bm{\hat{r}}}
+\newcommand{\hatx}{\bm{\hat{x}}}
+\newcommand{\haty}{\bm{\hat{y}}}
+\newcommand{\hatz}{\bm{\hat{z}}}
+\newcommand{\hatth}{\bm{\hat{\theta}}}
+\newcommand{\hatphi}{\bm{\hat{\phi}}}
+\newcommand{\hatrho}{\bm{\hat{\rho}}}
+\newcommand{\ei}[1]{\vec{\bm{e}}_#1}
+\theoremstyle{definition}
+\newtheorem*{solution*}{Solution}
+\renewcommand*{\proofname}{\textbf{Solution}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{proof}{\textbf{5.2}}
+From equation (5.0.26) we have that
+\begin{align*}
+    \sum_{j=0}^\infty (j+2)(j+1)a_{j+2}x^j
+    - \sum_{j=0}^\infty j(j-1)a_{j}x^j
+    - 2\sum_{j=0}^\infty ja_{j}x^j
+    + \lambda(\lambda + 1)\sum_{j=0}^\infty a_{j}x^j
+    = 0
+\end{align*}
+Then
+\begin{align*}
+    \sum_{j=0}^\infty \bigg[(j+2)(j+1)a_{j+2}
+    - j(j-1)a_{j}
+    - 2ja_{j}
+    + \lambda(\lambda + 1)a_{j}
+    \bigg]x^j
+    = 0
+\end{align*}
+So, must be that
+\begin{align*}
+    (j+2)(j+1)a_{j+2} - j(j-1)a_{j} - 2ja_{j} + \lambda(\lambda + 1)a_{j}
+    &= 0\\
+    (j+2)(j+1)a_{j+2} + a_j(-j(j-1) - 2j + \lambda(\lambda + 1))
+    &= 0\\
+    (j+2)(j+1)a_{j+2} + a_j(-j^2 - j - \lambda j + \lambda^2 + \lambda + \lambda j)
+    &= 0\\
+    (j+2)(j+1)a_{j+2} + a_j(-j(j + 1 + \lambda) + \lambda(\lambda + 1 + j))
+    &= 0\\
+    (j+2)(j+1)a_{j+2} + a_j(\lambda-j)(j + 1 + \lambda)
+    &= 0
+\end{align*}
+Where we added and subtracted $\lambda j$ in the third step. Hence
+\begin{align*}
+    a_{j+2} &= - \frac{(\lambda-j)(\lambda + j + 1)}{(j+2)(j+1)}a_j
+\end{align*}
+Which is the expected recurrence formula.
+\end{proof}
+
+\end{document}

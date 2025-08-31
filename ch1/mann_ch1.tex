@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{adjustbox}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage[mathscr]{euscript}
+
+\title{\textbf{Solved selected problems of Lagrangian and Hamiltonian by Mann}}
+\author{Franco Zacco}
+\date{}
+
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{3cm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\hatr}{\bm{\hat{r}}}
+\newcommand{\hatx}{\bm{\hat{x}}}
+\newcommand{\haty}{\bm{\hat{y}}}
+\newcommand{\hatz}{\bm{\hat{z}}}
+\newcommand{\hatth}{\bm{\hat{\theta}}}
+\newcommand{\hatphi}{\bm{\hat{\phi}}}
+\newcommand{\hatrho}{\bm{\hat{\rho}}}
+\newcommand{\ei}[1]{\vec{\bm{e}}_#1}
+\theoremstyle{definition}
+\newtheorem*{solution*}{Solution}
+\renewcommand*{\proofname}{\textbf{Solution}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{proof}{\textbf{1.1}}
+Let us integrate the acceleration $2c$ to obtain the velocity $\dot{r}(t)$
+as follows
+\begin{align*}
+    \dot{r}(t) = \int 2c~dt = 2ct + C
+\end{align*}
+But at $t = 0$ we know that $\dot{r}(t) = b$ then $C = b$ and hence
+\begin{align*}
+    \dot{r}(t) = 2ct + b
+\end{align*}
+Now, we integrate again to obtain the position $r(t)$ as follows
+\begin{align*}
+    r(t) = \int 2ct + b~dt = ct^2 + bt + C
+\end{align*}
+But at $t = 0$ we know that $r(t) = a$ then $C = a$ and hence
+\begin{align*}
+    r(t) = ct^2 + bt + a
+\end{align*}
+
+
+\end{proof}
+
+\end{document}

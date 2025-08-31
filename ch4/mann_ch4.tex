@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{adjustbox}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage[mathscr]{euscript}
+
+\title{\textbf{Solved selected problems of Lagrangian and Hamiltonian by Mann}}
+\author{Franco Zacco}
+\date{}
+
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{3cm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\hatr}{\bm{\hat{r}}}
+\newcommand{\hatx}{\bm{\hat{x}}}
+\newcommand{\haty}{\bm{\hat{y}}}
+\newcommand{\hatz}{\bm{\hat{z}}}
+\newcommand{\hatth}{\bm{\hat{\theta}}}
+\newcommand{\hatphi}{\bm{\hat{\phi}}}
+\newcommand{\hatrho}{\bm{\hat{\rho}}}
+\newcommand{\ei}[1]{\vec{\bm{e}}_#1}
+\theoremstyle{definition}
+\newtheorem*{solution*}{Solution}
+\renewcommand*{\proofname}{\textbf{Solution}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{proof}{\textbf{4.2}}
+Let
+\begin{align*}
+    x(t) = a\cos(\omega t + \phi) \qquad
+    \dot{x}(t) = - a\omega \sin(\omega t + \phi)
+\end{align*}
+To compute the average kinetic energy over a cycle let us assume that $\phi = 0$
+or what is the same that we measure the time of the cycle from $\phi$ to
+$\omega T + \phi$, hence
+\begin{align*}
+    \langle\frac{1}{2}m\dot{x}^2\rangle
+    &= \frac{1}{T}\int_{0}^T \frac{1}{2}m a^2\omega^2 \sin^2(\omega t)~dt\\
+    &= \frac{ma^2\omega^2}{2T}\int_{0}^T \sin^2(\omega t)~dt\\
+    &= \frac{ma^2\omega^2}{2T}\bigg[\frac{t}{2}-\frac{\sin(2\omega t)}{4\omega}\bigg]_0^T\\
+    &= \frac{ma^2\omega^2}{2T}\bigg[\frac{T}{2}-\frac{\sin(2\omega T)}{4\omega}\bigg]\\
+    &= \frac{\pi^2ma^2}{T}
+\end{align*}
+Where we used that $\omega = 2\pi/T$ and hence $\sin(4\pi) = 0$.\\
+The average potential energy over a cycle is given by
+\begin{align*}
+    \langle\frac{1}{2}kx^2\rangle
+    &= \frac{1}{T}\int_{0}^T \frac{1}{2}k a^2 \cos^2(\omega t)~dt\\
+    &= \frac{ka^2}{2T}\int_{0}^T \cos^2(\omega t)~dt\\
+    &= \frac{m\omega^2a^2}{2T}\bigg[\frac{t}{2} + \frac{\sin(2\omega t)}{4\omega}\bigg]_0^T\\
+    &= \frac{ma^2\omega^2}{2T}\bigg[\frac{T}{2} + \frac{\sin(2\omega T)}{4\omega}\bigg]\\
+    &= \frac{\pi^2ma^2}{T}
+\end{align*}
+Where we used that $k = m\omega^2$.\\
+Finally, we compute the average energy as follows
+\begin{align*}
+    \langle\frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2\rangle
+    &= \frac{1}{T}\int_{0}^T \frac{1}{2}m a^2\omega^2 \sin^2(\omega t)
+    + \frac{1}{2}k a^2 \sin^2(\omega t)~dt\\
+    &= \frac{m\omega^2a^2}{2T}\int_{0}^T \sin^2(\omega t) + \cos^2(\omega t)~dt\\
+    &= \frac{m\omega^2a^2}{2T}\bigg[
+        \frac{t}{2}-\frac{\sin(2\omega t)}{4\omega}
+        + \frac{t}{2} + \frac{\sin(2\omega t)}{4\omega}
+    \bigg]_0^T\\
+    &= \frac{m\omega^2a^2}{2T}\cdot T\\
+    &= \frac{2\pi^2ma^2}{T}
+\end{align*}
+Therefore we see that
+\begin{align*}
+    \langle\frac{1}{2}m\dot{x}^2\rangle = \langle\frac{1}{2}kx^2\rangle
+    = \langle\frac{1}{2}m\dot{x}^2 + \frac{1}{2}kx^2\rangle
+\end{align*}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{adjustbox}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage[mathscr]{euscript}
+
+\title{\textbf{Solved selected problems of Lagrangian and Hamiltonian by Mann}}
+\author{Franco Zacco}
+\date{}
+
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{3cm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\hatr}{\bm{\hat{r}}}
+\newcommand{\hatx}{\bm{\hat{x}}}
+\newcommand{\haty}{\bm{\hat{y}}}
+\newcommand{\hatz}{\bm{\hat{z}}}
+\newcommand{\hatth}{\bm{\hat{\theta}}}
+\newcommand{\hatphi}{\bm{\hat{\phi}}}
+\newcommand{\hatrho}{\bm{\hat{\rho}}}
+\newcommand{\ei}[1]{\vec{\bm{e}}_#1}
+\theoremstyle{definition}
+\newtheorem*{solution*}{Solution}
+\renewcommand*{\proofname}{\textbf{Solution}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{proof}{\textbf{2.2}}
+To find the $r$ value that corresponds to the minimum of the potential well
+of
+\begin{align*}
+    U(r) = \frac{C}{r^\alpha} - \frac{D}{r^\beta}
+\end{align*}
+We must derivate $U(r)$ and make it equal to zero as follows
+\begin{align*}
+    \dv{U(r)}{r} = \frac{\beta D r^{-\beta} - \alpha C r^{-\alpha}}{r} &= 0\\
+    \beta D r^{-\beta} &= \alpha C r^{-\alpha}\\
+    r^{\alpha-\beta} &= \frac{\alpha C}{\beta D}\\
+    r &= \bigg(\frac{\alpha C}{\beta D}\bigg)^{1/(\alpha - \beta)}
+\end{align*}
+\end{proof}
+
+\end{document}
